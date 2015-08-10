@@ -3,16 +3,37 @@
 <head>
     <meta charset="utf-8">
     <title>Web Audio API</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:100,700,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input id="files" type="file">
     <div class="player">
         <div class="player__controls">
-            <div class="player__stop">&#9724;</div>
-            <div class="player__play">&#9658;</div>
+            <div class="player__play">
+                <svg width="20px" height="20px" viewBox="0 0 360.72 360.72">
+                    <polygon fill="#ffffff" points="38.25,0 38.25,357 318.75,178.5"/>
+                </svg>
+            </div>
+
+            <div class="player__pause">
+                <svg width="20px" height="20px" viewBox="0 0 360.72 360.72">
+                    <path fill="#ffffff" d="M25.5,357h102V0h-102V357z M229.5,0v357h102V0H229.5z"/>
+                </svg>
+            </div>
+            <div class="player__stop">
+                <svg width="20px" height="20px" viewBox="0 0 360.72 360.72">
+                    <path fill="#ffffff" d="M360.72,352.99c0,4.269-3.459,7.727-7.728,7.727H7.722c-4.263,0-7.722-3.458-7.722-7.727V7.724
+                        c0-4.263,3.459-7.721,7.722-7.721h345.271c4.259,0,7.716,3.458,7.716,7.721V352.99H360.72z"/>
+                </svg>
+            </div>
+
             <input class="player__volume" type="range" min="0" max="100" value="100">
+        </div>
+        <div class="player__title">
+            <span class="player__name">No artist</span>
+            <span class="player__size"></span>
+            <label for="add_files" class="add_files">Choose file</label>
+            <input id="add_files" type="file">
         </div>
         <div class="player__visual">
             <div class="player__strokes">
