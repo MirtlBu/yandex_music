@@ -10,13 +10,10 @@
     <div class="player">
         <div class="player__controls">
             <div class="player__play">
-                <svg width="20px" height="20px" viewBox="0 0 360.72 360.72">
+                <svg class="hidden" id="player__resume" width="20px" height="20px" viewBox="0 0 360.72 360.72">
                     <polygon fill="#ffffff" points="38.25,0 38.25,357 318.75,178.5"/>
                 </svg>
-            </div>
-
-            <div class="player__pause">
-                <svg width="20px" height="20px" viewBox="0 0 360.72 360.72">
+                <svg id="player__pause" width="20px" height="20px" viewBox="0 0 360.72 360.72">
                     <path fill="#ffffff" d="M25.5,357h102V0h-102V357z M229.5,0v357h102V0H229.5z"/>
                 </svg>
             </div>
@@ -26,14 +23,15 @@
                         c0-4.263,3.459-7.721,7.722-7.721h345.271c4.259,0,7.716,3.458,7.716,7.721V352.99H360.72z"/>
                 </svg>
             </div>
-
             <input class="player__volume" type="range" min="0" max="100" value="100">
-        </div>
-        <div class="player__title">
-            <span class="player__name">No artist</span>
-            <span class="player__size"></span>
             <label for="add_files" class="add_files">Choose file</label>
             <input id="add_files" type="file">
+        </div>
+        <div class="player__info">
+            <div class="player__title">
+                <span class="player__data">No artist</span>
+            </div>
+            <div class="player__size"></div>
         </div>
         <div class="player__visual">
             <div class="player__strokes">
@@ -93,7 +91,7 @@
         </div>
     </div>
 </body>
-
+<script type="text/javascript" src="JavaScript-ID3-Reader-master/dist/id3-minimized.js"></script>
 <script type="text/javascript" src="script.js"></script>
 
 </body>
